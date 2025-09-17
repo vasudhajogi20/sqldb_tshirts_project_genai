@@ -43,10 +43,15 @@ The system is intelligent enough to generate accurate queries for given question
 ```bash
   pip install -r requirements.txt
 ```
-4.Acquire an api key through makersuite.google.com and put it in .env file
+4. Configure environment
 
-```bash
-  GOOGLE_API_KEY="your_api_key_here"
+Set up your .env file with:
+
+LLAMA2_API_KEY="your_llama2_api_key_here"
+SQL_DATABASE_URL="your_database_connection_string_here"
+
+
+Used LangChain SQL Chain with LLaMA 2 LLM for query understanding.
 ```
 5. For database setup, run database/db_creation_atliq_t_shirts.sql in your MySQL workbench
 
@@ -72,4 +77,4 @@ streamlit run main.py
 - langchain_helper.py: This has all the langchain code
 - requirements.txt: A list of required Python packages for the project.
 - few_shots.py: Contains few shot prompts
-- .env: Configuration file for storing your Google API key.
+- .env: Configuration file for storing your LLAMA2_API_KEY.
